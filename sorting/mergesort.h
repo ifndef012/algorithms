@@ -45,13 +45,3 @@ void MergeSort(std::vector<T>& arr) {
     if (arr.empty()) return;
     MergeSort(arr, 0UL, arr.size() - 1);
 }
-
-int main(int argc, const char** args) {
-    std::vector<int> arr{4, 5, 9, 1, 1, 4, 6, 1, 2, 4, 8, 9, 9, 2, 3};
-    MergeSort(arr);
-    for (auto&& n: arr) {
-        std::cout << n << ' ';
-    }
-    std::cout << std::endl;
-    return 0;
-}
