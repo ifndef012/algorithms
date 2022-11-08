@@ -1,5 +1,8 @@
 #include "mergesort.h"
 #include "quicksort.h"
+#include "bubblesort.h"
+#include "insertionsort.h"
+#include "selectionsort.h"
 
 #include <string>
 #include <limits>
@@ -14,11 +17,20 @@ int main(int argc, const char** args) {
 
     std::string method{(argc > 1) ? args[1] : "q"};
     if (method == "m") {
+        std::cout << "MergeSort:\n";
         MergeSort(arr);
     } else if (method == "q") {
+        std::cout << "QuickSort:\n";
         QuickSort(arr);
-    } else {
-
+    } else if (method == "b") {
+        std::cout << "BubbleSort:\n";
+        BubbleSort(arr);
+    } else if (method == "i") {
+        std::cout << "InsertionSort:\n";
+        InsertionSort(arr);
+    } else if (method == "s") {
+        std::cout << "SelectionSort:\n";
+        SelectionSort(arr);
     }
 
     for (auto&& n: arr) {
