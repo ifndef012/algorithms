@@ -1,5 +1,7 @@
 #include "quickselect.h"
 
+#include "reservoir_sampling.h"
+
 #include <vector>
 #include <iostream>
 
@@ -12,5 +14,17 @@ int main(int argc, const char** args) {
     std::cout << QuickSelect(arr, 5) << std::endl;
     std::cout << QuickSelect(arr, 13) << std::endl;
     std::cout << QuickSelect(arr, 12) << std::endl;
+
+
+    for (auto&& n: ReservoirSampling(arr, 4)) {
+        std::cout << n << ' ';
+    }
+    std::cout << std::endl;
+
+    for (auto&& n: ReservoirSampling(arr, 7)) {
+        std::cout << n << ' ';
+    }
+    std::cout << std::endl;
+
     return 0;
 }
