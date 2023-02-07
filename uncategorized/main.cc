@@ -1,6 +1,7 @@
 #include "quickselect.h"
 #include "reservoir_sampling.h"
 #include "binary_search.h"
+#include "segment_tree.h"
 
 #include <vector>
 #include <iostream>
@@ -26,6 +27,12 @@ int main(int argc, const char** args) {
     std::cout << std::endl;
 
     std::cout << BinarySearch(arr, 13) << std::endl;
+
+    std::cout << "[TEST] Segment Tree: \n";
+    SegmentTree st{{1, 7, 6, 8, 2, 3, 4, 5, 0}};
+    std::cout << st.Query(2, 6) << std::endl;
+    st.Update(5, 100);
+    std::cout << st.Query(2, 6) << std::endl;
 
     return 0;
 }
